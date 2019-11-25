@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Jegyfoglalo
 {
-    public partial class Jegyvasarlo : Form
+    public partial class AdminForm : Form
     {
-        public Jegyvasarlo()
+        public AdminForm()
         {
             InitializeComponent();
+        }
+
+        private void AdminForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            System.Environment.Exit(0);
         }
     }
 }

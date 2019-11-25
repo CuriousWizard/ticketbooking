@@ -1,6 +1,6 @@
 ﻿namespace Jegyfoglalo
 {
-    partial class Jegyvasarlo
+    partial class AdminForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // Jegyvasarlo
+            // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 550);
-            this.Name = "Jegyvasarlo";
-            this.Text = "Jegyvásárló";
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "AdminForm";
+            this.Text = "AdminForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminForm_FormClosed);
             this.ResumeLayout(false);
 
         }
