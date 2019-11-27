@@ -21,5 +21,21 @@ namespace Jegyfoglalo
         {
             System.Environment.Exit(0);
         }
+
+        private void kijelentkezésToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Biztosan szeretne kijelentkezni?", "Kijelentkezés", MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.Yes)
+            {
+                this.Hide();
+                Login login = new Login();
+                login.Show();
+            }
+        }
+
+        private void névjegyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Készítette: Tremmel Dávid", "Névjegy");
+        }
     }
 }

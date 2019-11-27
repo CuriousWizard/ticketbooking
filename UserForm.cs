@@ -37,5 +37,16 @@ namespace Jegyfoglalo
         {
             System.Environment.Exit(0);
         }
+
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            label2.Text = comboBox1.SelectedItem.ToString();
+        }
+
+        private void UserForm_Load(object sender, EventArgs e)
+        {
+            comboBox1.SelectedIndex = 0;
+        }
+
     }
 }
