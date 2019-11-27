@@ -47,6 +47,5 @@ namespace Jegyfoglalo
         {
             comboBox1.SelectedIndex = 0;
         }
-
     }
 }
