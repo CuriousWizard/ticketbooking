@@ -65,7 +65,6 @@ namespace Jegyfoglalo
         private void UserForm_Load(object sender, EventArgs e)
         {
             comboBox1.SelectedIndex = 0;
-
             markSeats(comboBox1.SelectedItem.ToString());
         }
 
@@ -228,6 +227,7 @@ namespace Jegyfoglalo
             MessageBox.Show("Sikeres foglalás!");
             textBox_vasarlo.Text = "";
             label_osszesen.Text = "0 Ft";
+            osszesen = 0;
             selectedList.Clear();
             listBox1.Items.Clear();
             markSeats(comboBox1.SelectedItem.ToString());
