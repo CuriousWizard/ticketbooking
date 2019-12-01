@@ -230,7 +230,7 @@ namespace Jegyfoglalo
                     cmd.ExecuteNonQuery();
                 }
                 adatb.closeConnection();
-                MessageBox.Show("Sikeres foglalás!");
+                MessageBox.Show("Sikeres foglalás!", "Vásárlás", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textBox_vasarlo.Text = "";
                 label_osszesen.Text = "0 Ft";
                 osszesen = 0;
