@@ -83,13 +83,23 @@ namespace Jegyfoglalo
         private void showDataTable()
         {
             adatb.openConnection();
-            cmd = new SQLiteCommand("SELECT bookedBy, section, row, column FROM " + GetProperDB()+" WHERE status='booked' ORDER BY bookedBy asc", adatb.GetConnection());
+            cmd = new SQLiteCommand("SELECT bookedBy, section, row, seat FROM " + GetProperDB()+" WHERE status='booked' ORDER BY bookedBy asc", adatb.GetConnection());
             sda = new SQLiteDataAdapter(cmd);
             dt = new DataTable();
             sda.Fill(dt);
             dataGridView1.DataSource = dt;
 
+            for(int i = 0; i < dt.Rows.Count; i++)
+            {
+                if (comboBox2.Items.Contains(dt.Rows[i][0].ToString()) == false)
+                {
+                    comboBox2.Items.Add(dt.Rows[i][0].ToString());
+                }
+            }
+
             adatb.closeConnection();
+
+            
         }
 
         private void calculateIncome()
@@ -169,6 +179,33 @@ namespace Jegyfoglalo
             }
             else
                 return "";
+        }
+
+        private void comboBox2_SelectedValueChanged(object sender, EventArgs e)
+        {
+            adatb.openConnection();
+            cmd = new SQLiteCommand("SELECT row FROM "+GetProperDB()+" WHERE bookedBy='"+comboBox2.SelectedItem.ToString()+"'",adatb.GetConnection());
+            sda = new SQLiteDataAdapter(cmd);
+            dt = new DataTable();
+            sda.Fill(dt);
+            int foglalas = 0;
+
+            for(int i = 0; i < dt.Rows.Count; i++)
+            {
+                if(dt.Rows[i][0].ToString() == "A")
+                {
+                    foglalas += 50000;
+                }
+                else
+                {
+                    foglalas += 15000;
+                }
+            }
+            label2.Visible = true;
+            label_foglalas.Visible = true;
+            label_foglalas.Text = foglalas.ToString() + " Ft";
+
+            adatb.closeConnection();
         }
     }
 }

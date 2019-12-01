@@ -442,6 +442,25 @@
             this.label_bevVIPSzam = new System.Windows.Forms.Label();
             this.label_bevetelTeljes = new System.Windows.Forms.Label();
             this.label_bevTeljesSzam = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label_foglalas = new System.Windows.Forms.Label();
+            this.label_A = new System.Windows.Forms.Label();
+            this.label_B = new System.Windows.Forms.Label();
+            this.label_C = new System.Windows.Forms.Label();
+            this.label_D = new System.Windows.Forms.Label();
+            this.label_1seat = new System.Windows.Forms.Label();
+            this.label_10seat = new System.Windows.Forms.Label();
+            this.label_1seatside = new System.Windows.Forms.Label();
+            this.label_20seat = new System.Windows.Forms.Label();
+            this.label_30seat = new System.Windows.Forms.Label();
+            this.label_40seat = new System.Windows.Forms.Label();
+            this.label_6seatside = new System.Windows.Forms.Label();
+            this.label_12seatside = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox392)).BeginInit();
@@ -887,12 +906,12 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(764, 117);
+            this.dataGridView1.Location = new System.Drawing.Point(764, 167);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(446, 271);
+            this.dataGridView1.Size = new System.Drawing.Size(486, 221);
             this.dataGridView1.TabIndex = 2;
             // 
             // pictureBox392
@@ -5378,11 +5397,222 @@
             this.label_bevTeljesSzam.TabIndex = 848;
             this.label_bevTeljesSzam.Text = "0 Ft";
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(841, 117);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(175, 21);
+            this.comboBox2.TabIndex = 850;
+            this.comboBox2.SelectedValueChanged += new System.EventHandler(this.comboBox2_SelectedValueChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(761, 120);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 13);
+            this.label1.TabIndex = 851;
+            this.label1.Text = "Névre szűrés: ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(1033, 120);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 13);
+            this.label2.TabIndex = 852;
+            this.label2.Text = "Foglalás összege: ";
+            this.label2.Visible = false;
+            // 
+            // label_foglalas
+            // 
+            this.label_foglalas.AutoSize = true;
+            this.label_foglalas.Location = new System.Drawing.Point(1131, 120);
+            this.label_foglalas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_foglalas.Name = "label_foglalas";
+            this.label_foglalas.Size = new System.Drawing.Size(25, 13);
+            this.label_foglalas.TabIndex = 853;
+            this.label_foglalas.Text = "0 Ft";
+            this.label_foglalas.Visible = false;
+            // 
+            // label_A
+            // 
+            this.label_A.AutoSize = true;
+            this.label_A.Location = new System.Drawing.Point(665, 167);
+            this.label_A.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_A.Name = "label_A";
+            this.label_A.Size = new System.Drawing.Size(14, 13);
+            this.label_A.TabIndex = 854;
+            this.label_A.Text = "A";
+            // 
+            // label_B
+            // 
+            this.label_B.AutoSize = true;
+            this.label_B.Location = new System.Drawing.Point(665, 151);
+            this.label_B.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_B.Name = "label_B";
+            this.label_B.Size = new System.Drawing.Size(14, 13);
+            this.label_B.TabIndex = 855;
+            this.label_B.Text = "B";
+            // 
+            // label_C
+            // 
+            this.label_C.AutoSize = true;
+            this.label_C.Location = new System.Drawing.Point(665, 134);
+            this.label_C.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_C.Name = "label_C";
+            this.label_C.Size = new System.Drawing.Size(14, 13);
+            this.label_C.TabIndex = 856;
+            this.label_C.Text = "C";
+            // 
+            // label_D
+            // 
+            this.label_D.AutoSize = true;
+            this.label_D.Location = new System.Drawing.Point(665, 117);
+            this.label_D.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_D.Name = "label_D";
+            this.label_D.Size = new System.Drawing.Size(15, 13);
+            this.label_D.TabIndex = 857;
+            this.label_D.Text = "D";
+            // 
+            // label_1seat
+            // 
+            this.label_1seat.AutoSize = true;
+            this.label_1seat.Location = new System.Drawing.Point(65, 102);
+            this.label_1seat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_1seat.Name = "label_1seat";
+            this.label_1seat.Size = new System.Drawing.Size(13, 13);
+            this.label_1seat.TabIndex = 858;
+            this.label_1seat.Text = "1";
+            // 
+            // label_10seat
+            // 
+            this.label_10seat.AutoSize = true;
+            this.label_10seat.Location = new System.Drawing.Point(198, 102);
+            this.label_10seat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_10seat.Name = "label_10seat";
+            this.label_10seat.Size = new System.Drawing.Size(19, 13);
+            this.label_10seat.TabIndex = 859;
+            this.label_10seat.Text = "10";
+            // 
+            // label_1seatside
+            // 
+            this.label_1seatside.AutoSize = true;
+            this.label_1seatside.Location = new System.Drawing.Point(713, 198);
+            this.label_1seatside.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_1seatside.Name = "label_1seatside";
+            this.label_1seatside.Size = new System.Drawing.Size(13, 13);
+            this.label_1seatside.TabIndex = 860;
+            this.label_1seatside.Text = "1";
+            // 
+            // label_20seat
+            // 
+            this.label_20seat.AutoSize = true;
+            this.label_20seat.Location = new System.Drawing.Point(348, 102);
+            this.label_20seat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_20seat.Name = "label_20seat";
+            this.label_20seat.Size = new System.Drawing.Size(19, 13);
+            this.label_20seat.TabIndex = 861;
+            this.label_20seat.Text = "20";
+            // 
+            // label_30seat
+            // 
+            this.label_30seat.AutoSize = true;
+            this.label_30seat.Location = new System.Drawing.Point(498, 102);
+            this.label_30seat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_30seat.Name = "label_30seat";
+            this.label_30seat.Size = new System.Drawing.Size(19, 13);
+            this.label_30seat.TabIndex = 862;
+            this.label_30seat.Text = "30";
+            // 
+            // label_40seat
+            // 
+            this.label_40seat.AutoSize = true;
+            this.label_40seat.Location = new System.Drawing.Point(648, 103);
+            this.label_40seat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_40seat.Name = "label_40seat";
+            this.label_40seat.Size = new System.Drawing.Size(19, 13);
+            this.label_40seat.TabIndex = 863;
+            this.label_40seat.Text = "40";
+            // 
+            // label_6seatside
+            // 
+            this.label_6seatside.AutoSize = true;
+            this.label_6seatside.Location = new System.Drawing.Point(713, 280);
+            this.label_6seatside.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_6seatside.Name = "label_6seatside";
+            this.label_6seatside.Size = new System.Drawing.Size(13, 13);
+            this.label_6seatside.TabIndex = 864;
+            this.label_6seatside.Text = "6";
+            // 
+            // label_12seatside
+            // 
+            this.label_12seatside.AutoSize = true;
+            this.label_12seatside.Location = new System.Drawing.Point(710, 376);
+            this.label_12seatside.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_12seatside.Name = "label_12seatside";
+            this.label_12seatside.Size = new System.Drawing.Size(19, 13);
+            this.label_12seatside.TabIndex = 865;
+            this.label_12seatside.Text = "12";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(667, 390);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(14, 13);
+            this.label3.TabIndex = 866;
+            this.label3.Text = "A";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(683, 390);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(14, 13);
+            this.label4.TabIndex = 867;
+            this.label4.Text = "B";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(698, 390);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(14, 13);
+            this.label5.TabIndex = 868;
+            this.label5.Text = "C";
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1306, 558);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label_12seatside);
+            this.Controls.Add(this.label_6seatside);
+            this.Controls.Add(this.label_40seat);
+            this.Controls.Add(this.label_30seat);
+            this.Controls.Add(this.label_20seat);
+            this.Controls.Add(this.label_1seatside);
+            this.Controls.Add(this.label_10seat);
+            this.Controls.Add(this.label_1seat);
+            this.Controls.Add(this.label_D);
+            this.Controls.Add(this.label_C);
+            this.Controls.Add(this.label_B);
+            this.Controls.Add(this.label_A);
+            this.Controls.Add(this.label_foglalas);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label_bevTeljesSzam);
             this.Controls.Add(this.label_bevetelTeljes);
             this.Controls.Add(this.label_bevVIPSzam);
@@ -6617,5 +6847,24 @@
         private System.Windows.Forms.Label label_bevVIPSzam;
         private System.Windows.Forms.Label label_bevetelTeljes;
         private System.Windows.Forms.Label label_bevTeljesSzam;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_foglalas;
+        private System.Windows.Forms.Label label_A;
+        private System.Windows.Forms.Label label_B;
+        private System.Windows.Forms.Label label_C;
+        private System.Windows.Forms.Label label_D;
+        private System.Windows.Forms.Label label_1seat;
+        private System.Windows.Forms.Label label_10seat;
+        private System.Windows.Forms.Label label_1seatside;
+        private System.Windows.Forms.Label label_20seat;
+        private System.Windows.Forms.Label label_30seat;
+        private System.Windows.Forms.Label label_40seat;
+        private System.Windows.Forms.Label label_6seatside;
+        private System.Windows.Forms.Label label_12seatside;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

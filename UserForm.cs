@@ -155,7 +155,7 @@ namespace Jegyfoglalo
         {
             string seat;
             adatb.openConnection();
-            cmd = new SQLiteCommand("Select section,row, column from "+GetProperDB()+" where seatID='"+seatID+"'",adatb.GetConnection());
+            cmd = new SQLiteCommand("Select section,row, seat from "+GetProperDB()+" where seatID='"+seatID+"'",adatb.GetConnection());
             sda = new SQLiteDataAdapter(cmd);
             dt = new DataTable();
             sda.Fill(dt);
@@ -217,20 +217,27 @@ namespace Jegyfoglalo
 
         private void btnPurchase_Click(object sender, EventArgs e)
         {
-            adatb.openConnection();
-            for(int i =0;i<selectedList.Count;i++)
+            if (selectedList.Count == 0)
             {
-                cmd = new SQLiteCommand("UPDATE " + GetProperDB() + " SET status='booked', bookedBy='" + textBox_vasarlo.Text + "' where seatID=" + selectedList[i].ToString(), adatb.GetConnection());
-                cmd.ExecuteNonQuery();
+                MessageBox.Show("Kérlek válasz legalább egy helyet ahhoz hogy foglalhass!","Info", MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
-            adatb.closeConnection();
-            MessageBox.Show("Sikeres foglalás!");
-            textBox_vasarlo.Text = "";
-            label_osszesen.Text = "0 Ft";
-            osszesen = 0;
-            selectedList.Clear();
-            listBox1.Items.Clear();
-            markSeats(comboBox1.SelectedItem.ToString());
+            else
+            {
+                adatb.openConnection();
+                for (int i = 0; i < selectedList.Count; i++)
+                {
+                    cmd = new SQLiteCommand("UPDATE " + GetProperDB() + " SET status='booked', bookedBy='" + textBox_vasarlo.Text + "' where seatID=" + selectedList[i].ToString(), adatb.GetConnection());
+                    cmd.ExecuteNonQuery();
+                }
+                adatb.closeConnection();
+                MessageBox.Show("Sikeres foglalás!");
+                textBox_vasarlo.Text = "";
+                label_osszesen.Text = "0 Ft";
+                osszesen = 0;
+                selectedList.Clear();
+                listBox1.Items.Clear();
+                markSeats(comboBox1.SelectedItem.ToString());
+            }
         }
 
         private void PictureBox_Click(object sender, EventArgs e)
